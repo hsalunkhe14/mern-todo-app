@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; 
+  padding: 20px;
+}
+
+input[type='text'] {
+  flex: 1; 
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 7px;
+  background-color: bisque;
+  color: black;
+  border: none;
+  min-width: 400px;
+}
+
+button {
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 7px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  cursor: pointer;
+  min-width: 80px; 
+}
+
+button:hover {
+  background-color: rgb(84, 19, 146);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #333; /* Darker background for better contrast */
+  color: white;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 100%; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task .checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.task .icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: blueviolet; 
+  margin-left: 10px; 
+}
+
+.task p {
+  margin-left: 10px; 
+}
+
+.through{
+  text-decoration: line-through;
+}
+.normal{
+  text-decoration: none;
+}
+
+/* Priority styling */
+.priority {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block; /* Make sure it's displayed inline with text */
+  margin-left: 10px;
+  text-align: center;
+  width: 60px; /* Fixed width for uniform appearance */
+}
+
+.priority-low {
+  background-color: #A0AEC0; /* Gray for Low priority */
+}
+
+.priority-medium {
+  background-color: #F6E05E; /* Yellow for Medium priority */
+}
+
+.priority-high {
+  background-color: #FC8181; /* Red for High priority */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+  .create-form {
+    flex-direction: column; /* Stack input and button vertically on smaller screens */
+    align-items: stretch;
+  }
+
+  input[type='text'], button {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 10px 0; /* Add margin for spacing */
+  }
+
+  button {
+    width: auto; /* Allows the button to adjust based on text size */
+    padding: 10px 20px; /* Better padding for touch targets */
+  }
+
+  .priority {
+    margin-top: 5px; /* Extra spacing in mobile view */
+    width: auto; /* Auto width for flexible display */
+  }
+
+  .task {
+    align-items: stretch;
+  }
+}
